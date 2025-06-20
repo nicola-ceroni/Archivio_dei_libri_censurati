@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archivio Libri Censurati</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-warning " style="--bs-bg-opacity: .15;">
+  <div class="container py-4">
+    <h1 class="text-center mb-4 display-1 ">Archivio Digitale dei Libri Censurati</h1>
+
+    <!-- Nav Tabs -->
+    <nav class="navbar navbar-expand-lg bg-light text-center my-4 " style="--bs-bg-opacity: .80;">
+      <div class="container text-center fs-3">
+        <a class="navbar-brand" href="#">
+          <img src="img_home.jpg" alt="book" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="libri.html">Libri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visita.html">Visita guidata</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Tab Contents -->
+    <div class="tab-content ">
+      <!-- Visita Indipendente -->
+      <div class="tab-pane fade show active my-3" id="indipendente">
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <select class="form-select" id="filterCategoria">
+              <option value="">Filtra per categoria libro</option>
+              <option value="Romanzo">Romanzo</option>
+              <option value="Distopico">Distopico</option>
+              <option value="Fantascenza">Fantascenza</option>
+              <option value="Diario">Diario</option>
+              <option value="Poesie">Poesie</option>
+              <option value="Saggio">Saggio</option>
+              <option value="Novelle">Novelle</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-select" id="filterCensura">
+              <option value="">Filtra per tipo censura</option>
+              <option value="Politica">Politica</option>
+              <option value="Religiosa">Religiosa</option>
+              <option value="Morale">Morale</option>
+              <option value="Esplicito">Esplicito</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <select class="form-select" id="sortAnno">
+              <option value="">Ordina per anno</option>
+              <option value="asc">Anno crescente</option>
+              <option value="desc">Anno decrescente</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="container">
+          <div id="libreria" class="row row-cols-3 row-cols-md-3 my-3">
+            
+            <!-- Libri -->
+
+            <div class="col-md4 my-5 libro" data-categoria="Distopico" data-censura="Politica" data-anno="1949">
+              <div class="card h-100">
+                <img src="1984.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">1984</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1949<br>
+                  <strong>Autore:</strong> George Orwell<br>
+                  <strong>Categoria:</strong> Distopico<br>
+                  <strong>Censura:</strong> Politica<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="1984.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Saggio" data-censura="Religiosa" data-anno="1764">
+              <div class="card h-100">
+                <img src="beccaria.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Dei delitti e delle pene</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1764<br>
+                  <strong>Autore:</strong> Cesare Beccaria<br>
+                  <strong>Categoria:</strong> Romanzo<br>
+                  <strong>Censura:</strong> Religiosa<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="beccaria.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Saggio" data-censura="Religiosa" data-anno="1584">
+              <div class="card h-100">
+                <img src="bruno.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">De l'infinito, universo e mondi</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1584<br>
+                  <strong>Autore:</strong> Giordano Bruno<br>
+                  <strong>Categoria:</strong> Saggio<br>
+                  <strong>Censura:</strong> Religiosa<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="bruno.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Novelle" data-censura="Esplicito" data-anno="1349">
+              <div class="card h-100">
+                <img src="decameron.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Decameron</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1349<br>
+                  <strong>Autore:</strong> Giovanni Boccaccio<br>
+                  <strong>Categoria:</strong> Novelle<br>
+                  <strong>Censura:</strong> Esplicito<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="decameron.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Diario" data-censura="Politica" data-anno="1947">
+              <div class="card h-100">
+                <img src="diario.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Diario</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1947<br>
+                  <strong>Autore:</strong> Anna Frank<br>
+                  <strong>Categoria:</strong> Diario<br>
+                  <strong>Censura:</strong> Politica<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="diario.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Fantascenza" data-censura="Politica" data-anno="1953">
+              <div class="card h-100">
+                <img src="fahrenheit-451.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Fahrenheit 451</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1953<br>
+                  <strong>Autore:</strong> Ray Bradbury<br>
+                  <strong>Categoria:</strong> Fantascenza<br>
+                  <strong>Censura:</strong> Politica<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="fahrenheit.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Poesie" data-censura="Esplicito" data-anno="1857">
+              <div class="card h-100">
+                <img src="fiori del male.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">I fiori del male</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1857<br>
+                  <strong>Autore:</strong> Charles Baudelaire<br>
+                  <strong>Categoria:</strong> Poesie<br>
+                  <strong>Censura:</strong> Esplicito<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="baudelaire.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Romanzo" data-censura="Politica" data-anno="1958">
+              <div class="card h-100">
+                <img src="il gattopardo.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Il gattopardo</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1958<br>
+                  <strong>Autore:</strong> Giuseppe Tomasi di Lampedusa<br>
+                  <strong>Categoria:</strong> Romanzo<br>
+                  <strong>Censura:</strong> Politica<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="gattopardo.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Romanzo" data-censura="Esplicito" data-anno="1982">
+              <div class="card h-100">
+                <img src="il colore viola.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Il colore viola</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1982<br>
+                  <strong>Autore:</strong> Alice Walker<br>
+                  <strong>Categoria:</strong> Romanzo<br>
+                  <strong>Censura:</strong> Esplicito<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="il colore viola.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Saggio" data-censura="Politica" data-anno="1532">
+              <div class="card h-100">
+                <img src="il principe.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Il principe</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1532<br>
+                  <strong>Autore:</strong> Niccolò Macchiavelli<br>
+                  <strong>Categoria:</strong> Saggio<br>
+                  <strong>Censura:</strong> Politica<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="il principe.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Romanzo" data-censura="Morale" data-anno="1955">
+              <div class="card h-100">
+                <img src="lolita.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Lolita</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1955<br>
+                  <strong>Autore:</strong> Vladimir Nabokov<br>
+                  <strong>Categoria:</strong> Romanzo<br>
+                  <strong>Censura:</strong> Morale<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="lolita.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md4 my-5 libro" data-categoria="Romanzo" data-censura="Esplicito" data-anno="1934">
+              <div class="card h-100">
+                <img src="tropico del cancro.jpg" class="card-img-top img-fluid" style="object-fit: contain; height: 300px;" alt="Copertina libro">
+                <div class="card-body">
+                  <h5 class="card-title">Tropico del Cancro</h5>
+                  <p class="card-text"><strong>Anno:</strong> 1934<br>
+                  <strong>Autore:</strong> Henry Miller<br>
+                  <strong>Categoria:</strong> Romanzo<br>
+                  <strong>Censura:</strong> Esplicito<br>
+                  <div class="container row row-cols-2 row-cols-md-3 my-2">
+                    <a href="tropico del cancro.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="Scopri di più su 1984">Scopri</a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button class="btn btn-sm btn-primary ms-2 btn-letto">Letto</button>
+                  <small class="text-muted">Lettori: <span class="lettori-counter">0</span></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  <footer class="bg-dark text-white mt-5 py-4 w-100">
+    <div class="text-center px-3">
+      <p class="mb-1">
+        <strong>Archivio Digitale dei Libri Censurati</strong><br>
+        <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License">
+        <br>
+        Questo progetto è distribuito sotto Licenza 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-white text-decoration-underline">
+          Creative Commons BY-NC-SA 4.0
+        </a>.
+      </p>
+      <p class="mb-0 small">
+        Puoi condividere e adattare il contenuto per scopi non commerciali, citando la fonte e condividendo con la stessa licenza.
+      </p>
+    </div>
+  </footer>
+
+
+
+
+
+
+  
+  <script>
+    // Filtraggio e ordinamento dinamico
+    const filterCategoria = document.getElementById("filterCategoria");
+    const filterCensura = document.getElementById("filterCensura");
+    const sortAnno = document.getElementById("sortAnno");
+
+    const updateLibrary = () => {
+      const categoria = filterCategoria.value;
+      const censura = filterCensura.value;
+      const sort = sortAnno.value;
+
+      let libri = Array.from(document.querySelectorAll(".libro"));
+
+      libri.forEach(el => {
+        const matchCategoria = !categoria || el.dataset.categoria === categoria;
+        const matchCensura = !censura || el.dataset.censura === censura;
+        el.style.display = (matchCategoria && matchCensura) ? "block" : "none";
+      });
+
+      if (sort) {
+        libri.sort((a, b) => {
+          const annoA = parseInt(a.dataset.anno);
+          const annoB = parseInt(b.dataset.anno);
+          return sort === "asc" ? annoA - annoB : annoB - annoA;
+        });
+        const container = document.getElementById("libreria");
+        container.innerHTML = "";
+        libri.forEach(el => container.appendChild(el));
+      }
+    };
+
+    filterCategoria.addEventListener("change", updateLibrary);
+    filterCensura.addEventListener("change", updateLibrary);
+    sortAnno.addEventListener("change", updateLibrary);
+
+    // Pulsante "Letto" per incremento contatore
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('.btn-letto').forEach(button => {
+        button.addEventListener('click', () => {
+          const counter = button.closest('.card-footer').querySelector('.lettori-counter');
+          let valore = parseInt(counter.textContent);
+          counter.textContent = valore + 1;
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

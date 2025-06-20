@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visita Guidata</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #fff3cd;
+      overflow-x: hidden;
+    }
+    .carousel {
+      position: relative;
+    }
+    .carousel-inner {
+      width: 100%;
+    }
+    .carousel-item {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .carousel-item.active {
+      display: flex;
+    }
+    .book-content {
+      max-width: 600px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+    }
+    .book-img {
+      max-height: 350px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="text-center mb-4 display-1">Archivio Digitale dei Libri Censurati</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light text-center my-4" style="--bs-bg-opacity: .80;">
+      <div class="container text-center fs-3">
+        <a class="navbar-brand" href="#">
+          <img src="img_home.jpg" alt="book" width="50" height="50" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="libri.html">Libri</a></li>
+            <li class="nav-item"><a class="nav-link active" href="visita.html">Visita guidata</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carosello -->
+
+    <!-- bruno-->
+    <div id="carouselLibri" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="book-content">
+            <img src="bruno.jpg" class="book-img" alt="De l'infinito, universo e mondi" href="bruno.html">
+            <br>
+            <a class="h1 text-decoration-none" href="bruno.html">De l'infinito, universo e mondi</a>
+            <p><strong>Autore:</strong> Giordano Bruno</p>
+            <p><strong>Anno:</strong> 1584</p>
+            <p><strong>Categoria:</strong> Saggio</p>
+            <p><strong>Censura:</strong> Religiosa</p>
+          </div>
+        </div>
+
+        <!-- tropico-->
+        <div class="carousel-item">
+          <div class="book-content">
+            <img src="tropico del cancro.jpg" class="book-img" alt="Tropico del Cancro"><br>
+            <a class="h1 text-decoration-none" href="tropico del cancro.html">Tropico del Cancro</a>
+            <p><strong>Autore:</strong> Henry Miller</p>
+            <p><strong>Anno:</strong> 1934</p>
+            <p><strong>Categoria:</strong> Romanzo</p>
+            <p><strong>Censura:</strong> Morale e sessuale</p>
+          </div>
+        </div>
+
+        <!-- lolita-->
+        <div class="carousel-item">
+          <div class="book-content">
+            <img src="lolita.jpg" class="book-img" alt="Lolita"><br>
+            <a class="h1 text-decoration-none" href="lolita.html">Lolita</a>
+            <p><strong>Autore:</strong> Vladimir Nabokov</p>
+            <p><strong>Anno:</strong> 1955</p>
+            <p><strong>Categoria:</strong> Romanzo</p>
+            <p><strong>Censura:</strong> Morale e sessuale</p>
+          </div>
+        </div>
+      
+        <!-- 1984-->
+        <div class="carousel-item">
+            <div class="book-content">
+                <img src="1984.jpg" class="book-img" alt="1984"><br>
+                <a class="h1 text-decoration-none" href="1984.html">1984</a>
+                <p><strong>Autore:</strong> George Orwell</p>
+                <p><strong>Anno:</strong> 1949</p>
+                <p><strong>Categoria:</strong> Distopico</p>
+                <p><strong>Censura:</strong> Politica</p>
+            </div>
+        </div>
+
+        <!-- beccaria-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="beccaria.jpg" class="book-img" alt="Dei delitti e delle pene"><br>
+              <a class="h1 text-decoration-none" href="beccaria.html">Dei delitti e delle pene</a>
+              <p><strong>Autore:</strong> Cesare Beccaria</p>
+              <p><strong>Anno:</strong> 1764</p>
+              <p><strong>Categoria:</strong> Romanzo</p>
+              <p><strong>Censura:</strong> Religiosa</p>
+            </div>
+        </div>
+
+        <!-- decameron-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="decameron.jpg" class="book-img" alt="Decameron"><br>
+              <a class="h1 text-decoration-none" href="decameron.html">Decameron</a>
+              <p><strong>Autore:</strong> Giovanni Boccaccio</p>
+              <p><strong>Anno:</strong> 1349</p>
+              <p><strong>Categoria:</strong> Novelle</p>
+              <p><strong>Censura:</strong> Esplicito</p>
+            </div>
+        </div>
+
+        <!-- Diario-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="diario.jpg" class="book-img" alt="Diario"><br>
+              <a class="h1 text-decoration-none" href="diario.html">Diario</a>
+              <p><strong>Autore:</strong> Anna Frank</p>
+              <p><strong>Anno:</strong> 1947</p>
+              <p><strong>Categoria:</strong> Diario</p>
+              <p><strong>Censura:</strong> Politica</p>
+            </div>
+        </div>
+
+        <!-- Fahrenheit-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="fahrenheit-451.jpg" class="book-img" alt="fahrenheit-451"><br>
+              <a class="h1 text-decoration-none" href="fahrenheit.html">Decameron</a>
+              <p><strong>Autore:</strong> Ray Bradbury</p>
+              <p><strong>Anno:</strong> 1953</p>
+              <p><strong>Categoria:</strong> Fantascenza</p>
+              <p><strong>Censura:</strong> Politica</p>
+            </div>
+        </div>
+
+        <!-- fiori-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="fiori del male.jpg" class="book-img" alt="fiori del male"><br>
+              <a class="h1 text-decoration-none" href="baudelaire.html">I fiori del male</a>
+              <p><strong>Autore:</strong> Charles Baudelaire</p>
+              <p><strong>Anno:</strong> 1857</p>
+              <p><strong>Categoria:</strong> Poesie</p>
+              <p><strong>Censura:</strong> Esplicito</p>
+            </div>
+        </div>
+
+        <!-- gattopardo-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="il gattopardo.jpg" class="book-img" alt="il gattopardo"><br>
+              <a class="h1 text-decoration-none" href="gattopardo.html">Il gattopardo</a>
+              <p><strong>Autore:</strong> Giuseppe Tomasi di Lampedusa</p>
+              <p><strong>Anno:</strong> 1958</p>
+              <p><strong>Categoria:</strong> Romanzo</p>
+              <p><strong>Censura:</strong> Politica</p>
+            </div>
+        </div>
+
+        <!-- colore viola-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="il colore viola.jpg" class="book-img" alt="il colore viola"><br>
+              <a class="h1 text-decoration-none" href="il colore viola.html">Il colore viola</a>
+              <p><strong>Autore:</strong> Alice Walker</p>
+              <p><strong>Anno:</strong> 1982</p>
+              <p><strong>Categoria:</strong> Romanzo</p>
+              <p><strong>Censura:</strong> Esplicito</p>
+            </div>
+        </div>
+
+        <!-- principe-->
+        <div class="carousel-item">
+            <div class="book-content">
+              <img src="il principe.jpg" class="book-img" alt="il principe"><br>
+              <a class="h1 text-decoration-none" href="il principe.html">Il principe</a>
+              <p><strong>Autore:</strong> Niccolò Macchiavelli</p>
+              <p><strong>Anno:</strong> 1532</p>
+              <p><strong>Categoria:</strong> Saggio</p>
+              <p><strong>Censura:</strong> Politica</p>
+            </div>
+        </div>
+      
+    </div>
+
+      <!-- Controlli -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselLibri" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Precedente</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselLibri" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Successivo</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer Creative Commons -->
+  <footer class="bg-dark text-white mt-5 py-4 w-100">
+    <div class="text-center px-3">
+      <p class="mb-1">
+        <strong>Archivio Digitale dei Libri Censurati</strong><br>
+        <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons License"><br>
+        Questo progetto è distribuito sotto Licenza 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-white text-decoration-underline">
+          Creative Commons BY-NC-SA 4.0
+        </a>.
+      </p>
+      <p class="mb-0 small">
+        Puoi condividere e adattare il contenuto per scopi non commerciali, citando la fonte e condividendo con la stessa licenza.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
